@@ -1,0 +1,22 @@
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US East (N. Virginia),Primary Database Instance,Amazon RDS for MySQL,0,1854.368,22252.42,USD,"Quantity (1), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (1 TB), Instance type (db.r5.4xlarge)"
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US East (N. Virginia),,S3 Standard,0,1177.6,14131.2,USD,S3 Standard storage (50 TB per month)
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US East (N. Virginia),,Data Transfer,0,0,0,USD,"DT Inbound: Not selected (0 TB per month), DT Outbound: Amazon CloudFront (50 TB per month)"
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US West (Oregon),Read-Replica Database Instance,Amazon RDS for MySQL,0,1854.368,22252.42,USD,"Quantity (1), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (1 TB), Instance type (db.r5.4xlarge)"
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US East (N. Virginia),,Application Load Balancer,0,442.45,5309.4,USD,Number of Application Load Balancers (2)
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US West (Oregon),Hot Standby NAT gateway ,Amazon Virtual Private Cloud (VPC),0,74.7,896.4,USD,Number of NAT Gateways (2)
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US West (Oregon),"Hot Standby 4 Web Servers, 4 Application Servers",Amazon EC2,0,5718.64,68623.68,USD,"Operating system (Linux), Quantity (8), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (1 TB), Instance type (c5ad.8xlarge)"
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US East (N. Virginia),"6 Web Servers, 6 Application Servers",Amazon EC2,0,8577.96,102935.52,USD,"Operating system (Linux), Quantity (12), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (1 TB), Instance type (c5ad.8xlarge)"
+Task 2: Calculate Infrastructure Costs - Part 2 - Increased Cost Estimate,US East (N. Virginia),NAT gateway to provide software updates for private subnet,Amazon Virtual Private Cloud (VPC),0,74.7,896.4,USD,Number of NAT Gateways (2)
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
+,,,,,,,,
+"Rationale: I increased the number of application servers and web servers for increased performance,",,,,,,,,
+as well as increasing the instance size of the database instance sizes from db.r5.2xlarge to db.r5.4xlarge.,,,,,,,,
+The new database instances needed to be increased to handle the new load from the application servers.,,,,,,,,
+"For added redundancy, a hot-standby of the instances were placed in the Oregon region, including a",,,,,,,,
+"read-replica for quick disaster recovery. I would have chosen to place the DR region in Ohio, but",,,,,,,,
+it does not support the EC2 instances that have been deployed in Northern Virginia.,,,,,,,,

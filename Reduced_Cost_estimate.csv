@@ -1,0 +1,16 @@
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Task 2: Calculate Infrastructure Costs - Part 2 - Reduced Cost Estimate,US East (N. Virginia),Primary Database Instance,Amazon RDS for MySQL,0,1044.944,12539.33,USD,"Quantity (1), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (1 TB), Instance type (db.r5.2xlarge)"
+Task 2: Calculate Infrastructure Costs - Part 2 - Reduced Cost Estimate,US East (N. Virginia),,S3 Standard,0,1177.6,14131.2,USD,S3 Standard storage (50 TB per month)
+Task 2: Calculate Infrastructure Costs - Part 2 - Reduced Cost Estimate,US East (N. Virginia),,Data Transfer,0,0,0,USD,"DT Inbound: Not selected (0 TB per month), DT Outbound: Amazon CloudFront (50 TB per month)"
+Task 2: Calculate Infrastructure Costs - Part 2 - Reduced Cost Estimate,US East (N. Virginia),,Application Load Balancer,0,442.45,5309.4,USD,Number of Application Load Balancers (2)
+Task 2: Calculate Infrastructure Costs - Part 2 - Reduced Cost Estimate,US East (N. Virginia),NAT gateway to provide software updates for private subnet,Amazon Virtual Private Cloud (VPC),0,74.7,896.4,USD,Number of NAT Gateways (2)
+Task 2: Calculate Infrastructure Costs - Part 2 - Reduced Cost Estimate,US East (N. Virginia),"4 Web Servers, 4 Application Servers",Amazon EC2,0,3184.08,38208.96,USD,"Operating system (Linux), Quantity (8), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (1 TB), Instance type (c5ad.4xlarge)"
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
+,,,,,,,,
+"Rationale:  I removed the read-replica instance, as this functionality can be achieved via the Multi-AZ deployment. This cut the database bill by half.",,,,,,,,
+I also decreased the instance sizes of the application and web servers from c5ad.8xlarge to c5ad.4xlarge. This reduces our computing output,,,,,,,,
+"by half, but it is within our budget.",,,,,,,,
